@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<title>thinkspeak</title>
+	<style type="text/css">
+ body{
+  background-color: #013A6B;
+  background-image: -webkit-linear-gradient(150deg, #013A6B 50%, #ffff 50%);
+  min-height: 650px;
+}
+.DATA{
+	color: #004E95;
+	font-weight: bolder;
+	font-size: 70px;
+	margin-left: 185px;
+	letter-spacing: 4px;
+	margin-top: 0px;
+}
+.heading{
+	color: #013A6B;
+	font-weight: bolder;
+	font-size: 40px;
+	margin-left: 85px;
+	letter-spacing: 2px;
+	margin-top: 0px;
+	position: absolute;
+}
+
+.iframe1{
+/*width="460" height="260"*/
+width: 460px;
+height: 260px;
+margin-left: 30px;
+}
+/*.iframe3{
+width: 460px;
+height: 260px;
+margin-left: 50px;
+}*/
+
+.iframe3{
+width: 460px;
+height: 260px;
+margin-left: 30px;
+}
+.iframe4{
+ width: 460px;
+height: 260px;
+margin-left: 30px;
+}
+.iframe5{
+	width: 460px;
+height: 260px;
+margin-left: 30px;
+}
+.DATA1{
+	color: #004E95;
+	font-weight: bold;
+	font-size: 40px;
+	/*margin-left: 10px;*/
+	/*letter-spacing: 1px;*/
+}
+.iframe2{
+width: 98%;
+
+height: 260px;
+margin-top: 20px;
+}
+.secsome{
+	margin-left: 150px; color: #ffff;font-size: 40px;
+}
+.secsome1{
+	margin-left: 150px; color: #ffff;font-size: 40px;
+}
+}
+
+	</style>
+	<script type="text/javascript">
+		$(window).on('resize', function() {
+    if($(window).width() > 600) {
+        $('#first').addClass('DATA');
+         $('#second').addClass('DATA');
+        $('#iframe').addClass('iframe1');
+         $('#secs').addClass('secsome');
+         $('#iframeid2').addClass('iframe3');
+         $('#iframeid3').addClass('iframe4');
+          $('#iframeid4').addClass('iframe5');
+
+
+        $('#first').removeClass('DATA1');
+        $('#second').removeClass('DATA1');
+         $('#iframe').removeClass('iframe2');
+          $('#iframeid2').removeClass('iframe2');
+           $('#iframeid3').removeClass('iframe2');
+             $('#iframeid4').removeClass('iframe2');
+         $('#secs').removeClass('secsome1');
+    }else{
+        $('#first').addClass('DATA1');
+	    $('#second').addClass('DATA1');
+	     $('#iframe').addClass('iframe2');
+	      $('#iframeid2').addClass('iframe2');
+	     $('#iframeid3').addClass('iframe2');
+	      $('#iframeid4').addClass('iframe2');
+	      $('#secs').addClass('secsome1');
+
+       $('#first').removeClass('DATA');
+         $('#second').removeClass('DATA');
+        $('#iframe').removeClass('iframe1');
+         $('#iframeid2').removeClass('iframe3');
+          $('#iframeid3').removeClass('iframe4');
+           $('#iframeid4').removeClass('iframe5');
+        $('#secs').removeClass('secsome');
+
+    }
+  })
+// 		$(window).on('resize', function() {
+//     if($(window).height() > 400) {
+//         $('#first').addClass('DATA');
+//         $('#first').addClass('iframe');
+
+//         $('#second').removeClass('DATA1');
+//          $('#iframe').removeClass('iframe1');
+//     }else{
+//         $('#body').addClass('DATA1');
+// 	    $('#body').addClass('DATA1');
+
+//         $('#body').removeClass('DATA');
+//         $('#body').removeClass('iframe');
+
+//     }
+// })
+	</script>
+</head>
+<body>
+	<br>
+ <h1 class="DATA" id="first">DATA VISUALISATION</h1>
+<!--  <h1 class="DATA" id="second">VISUALISATION</h1>
+ -->
+ <!-- <h3 class="heading">SOMETHING</h3> -->
+ <br>
+ <div class="row">
+ 	<!-- <div class="col-md-1">
+ 		
+ 	</div> -->
+ 	<div class="col-md-6">
+ 		<h2 style="color: #004E95;font-size: 40px; margin-left: 50px;">WITH MODEL</h2>
+ 		<iframe  class="iframe1" id="iframe" style="border: 0px solid #cccccc; box-shadow: 2px;" class="iframe" src="https://thingspeak.com/channels/9/charts/2?days=5&dynamic=true&median=60&round=2&type=line"></iframe>
+ 		<br>
+ 		<hr>
+ 		<br>
+ 		<iframe  class="iframe3" id="iframeid2" style="border: 0px solid #cccccc; box-shadow: 2px;" class="iframe" src="https://thingspeak.com/channels/9/charts/2?days=5&dynamic=true&median=60&round=2&type=line"></iframe>
+ 	</div>
+ 	<div class="col-md-6">
+ 		<h2 class="secsome" id="secs">WITHOUT MODEL</h2>
+ 		<iframe  class="iframe4" id="iframeid3" style="border: 0px solid #cccccc; box-shadow: 2px;" class="iframe" src="https://thingspeak.com/channels/9/charts/2?days=5&dynamic=true&median=60&round=2&type=line"></iframe>
+ 		<br>
+ 		<hr>
+ 		<br>
+ 		<iframe  class="iframe5" id="iframeid4" style="border: 0px solid #cccccc; box-shadow: 2px;" class="iframe" src="https://thingspeak.com/channels/9/charts/2?days=5&dynamic=true&median=60&round=2&type=line"></iframe>
+
+ 	</div>
+ 	
+ </div>
+ <!-- <center>
+ 	<iframe  class="iframe1" id="iframe" style="border: 0px solid #cccccc; box-shadow: 2px;" class="iframe" src="https://thingspeak.com/channels/9/charts/2?days=5&dynamic=true&median=60&round=2&type=line"></iframe>
+ </center> -->
+</body>
+</html>
