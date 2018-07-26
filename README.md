@@ -8,7 +8,7 @@ Suppose, a presence of 50% attendance in a conference room on a day. The electri
 Moreover, the lights, fans, and other eletrical appliances turn off automatically when everyone starts exiting the room, to prevent wastage of even slightest of energy. In the displayed model in Hackathon, we have displayed the idea with LEDs, and automation. Precise Counting and automated lighting which saves a great extent of energy (upto 45-55%) is the main attraction of the our HACK.
 
 ### Video URL of Working Model: ###
-
+https://drive.google.com/file/d/1nxYqXyUmYcFjCV5DT-De7zaOl5Crf9Av/view?usp=drivesdk
 
 
 
