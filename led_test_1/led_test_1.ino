@@ -1,14 +1,16 @@
 int count = 0;
 int led[4];
-int i;
+int i=0;
 int j = 4;
-for(i=0;i<4;i++)
-{
-  led[i] = j;
-  j++;
-}
+
 
 void setup() {
+  Serial.begin(9600);
+  while(i<4)
+{
+  led[i++] = j;
+  j++;
+}
   pinMode(led[0], OUTPUT);
   pinMode(led[1], OUTPUT);
   pinMode(led[2], OUTPUT);
@@ -24,7 +26,7 @@ void loop() {
   digitalWrite(led[2], LOW);
   digitalWrite(led[3], LOW);
  }
- else if(count>0 && count<!=7)
+ else if(count>0 && count<=7)
  {
   digitalWrite(led[0], HIGH);
   digitalWrite(led[1], LOW);
@@ -59,5 +61,8 @@ void loop() {
  }
 
 count ++;
-delay(2000);
+delay(350);
+
+
+Serial.println(count);
 }
