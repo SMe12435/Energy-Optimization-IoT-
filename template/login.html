@@ -11,31 +11,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="style.css" type="text/css">
-<script type="text/javascript">
-		function check_pass() {
-//     if (document.getElementById('password').value ==
-//             document.getElementById('confirm_password').value) {
-//         document.getElementById('submit').disabled = false;
-//     } else {
-//         document.getElementById('submit').disabled = true;
-//     }
-// }
-       if (document.getElementById('username').value == "mujadmin"){
-       	  document.getElementById('submit').disabled = true;
-     } else {
-         document.getElementById('submit').disabled = false;
-         document.getElementById("message").innerHTML="Please enter the correct username!";
-       }
-   }
-   function check_p() {
-       if (document.getElementById('password').value == "inspired"){
-       	  document.getElementById('submit').disabled = true;
-     } else {
-         document.getElementById('submit').disabled = false;
-         document.getElementById("messages").innerHTML="Please fill the correct password!";
-       }
-   }
-</script>
+
   </head>
   <body>
   	<br>
@@ -46,13 +22,14 @@
 		<div class="login-form">
 			<div class="sign-in-htm">
 				<div class="group">
+					<form method = "POST">
 					<label for="user" class="label">Username</label>
-					<input  type="text" class="input" id="username" value="" onchange='check_pass();'>
+					<input name = "login"  type="text" class="input" id="username" value="" onchange='check_pass();'>
 					<span id="message" style="color:  #CC4646;;"></span>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Password</label>
-				<input  type="password" class="input" data-type="password" id="password" value="" onchange='check_p();'>
+				<input name="pass" type="password" class="input" data-type="password" id="password" value="" onchange='check_p();'>
 					<span id="messages" style="color:  #CC4646;;"></span>
 				</div>
 				<div class="group">
@@ -62,6 +39,7 @@
 				<div class="group">
 					<input type="submit" class="button" name="button" value="Sign In"  id="submit" disabled>
 				</div>
+					</form>
 				<!-- <div>
 					<input type="submit" name="button" value="">
 				</div> -->
@@ -85,3 +63,19 @@
 </div>
   </body>
 </html>
+<?php
+if($_POST)
+{
+login = $_POST['login'];
+pass = $_POST['pass'];
+}
+
+if(login=="admin" && pass = "admin")
+{
+<script>
+window.location.href = "thinkspeak.html";
+</script>
+}
+
+
+
