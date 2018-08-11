@@ -65,7 +65,7 @@ void loop() {
 
   }
 
-  if (sensorValue1 > 200)
+  if (sensorValue1 > 400)
   {
     tstamp1 = now();
     if (countin == 1 && ((tstamp1 - tstamp) < 2))
